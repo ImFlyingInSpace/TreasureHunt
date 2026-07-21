@@ -1,10 +1,16 @@
-const TAJNE_HESLO = "bW5hdQ==";
+//tenhle level neni o divani se do zdrojaku btw :p
+const TAJNE_HESLO = "bWhudWFmdWw=";
 
 function overHeslo(){
     const zadaneHeslo = document.getElementById("heslo2").value.trim();
+    const hh = atob(TAJNE_HESLO);
+    let sh = "";
+    for(let i = 0; i< hh.length; i += 2){
+        sh += hh[i]; 
+    }
     const zpravaElem = document.getElementById("zprava");
 
-    if(zadaneHeslo==atob(TAJNE_HESLO)){
+    if(zadaneHeslo=== sh){
         window.location.href = "countdown.html";
     }
     else{
