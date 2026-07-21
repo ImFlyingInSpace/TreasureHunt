@@ -5,7 +5,7 @@ function overHeslo(){
     const zpravaElem = document.getElementById("zprava");
 
     if(zadaneHeslo==TAJNE_HESLO){
-        window.location.href = "level2.html";
+        window.location.href = "2/level2.html";
     }
     else{
         zpravaElem.innerText = ":(";

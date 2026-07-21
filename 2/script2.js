@@ -11,7 +11,7 @@ function overHeslo(){
     const zpravaElem = document.getElementById("zprava");
 
     if(zadaneHeslo=== sh){
-        window.location.href = "countdown.html";
+        window.location.href = "../3/level3.html";
     }
     else{
         zpravaElem.innerText = ":(";
