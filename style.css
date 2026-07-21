@@ -73,3 +73,16 @@ button {
     bottom: 100px;
     left: 50px;
 }
+
+.galerie{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.galerie img{
+    width: 22%;
+    height: auto;
+    max-width: 200px;
+}
