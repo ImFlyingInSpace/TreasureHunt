@@ -86,3 +86,10 @@ button {
     height: auto;
     max-width: 200px;
 }
+
+.karta {
+    flex: 1 ;
+    min-width: 200px;
+    padding: 15px;
+    text-align: center;
+}
