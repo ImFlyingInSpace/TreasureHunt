@@ -7,9 +7,14 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+    <button id="menuBtn" onclick="toggleMenu()">💖</button>
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleMenu()">×</button>
+        <h3>Odemčené levely</h3>
+        <ul id="levelList"></ul>
+    </div>
     <br><br>
-    <h2>11</h2>
-    <br><br>
+    <h2 class="lvlNo"></h2>    <br><br>
     <div class="galerie">
         <div class="karta">
             <h3>#00B2E2</h3>
@@ -33,10 +38,11 @@
         </div>
     </div>
     <br><br>
-    <input type="text" id="heslo11" placeholder="Heslo">
+    <input type="text" id="heslo" placeholder="Heslo">
     <br><br>
     <button onclick="overHeslo()"> -> </button>
     <p id="zprava"></p>
     <script src="script11.js?v=4"></script>
+    <script src="../menuScript.js"></script>
 </body>
 </html>

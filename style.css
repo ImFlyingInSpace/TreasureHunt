@@ -21,6 +21,74 @@ button {
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" style="font-size:24px"><text y="24">✨</text></svg>'), auto;
 }
 
+#menuBtn{
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 24px;
+    background: #f3daef;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" style="font-size:24px"><text y="24">✨</text></svg>'), auto;
+    z-index: 1000;
+}
+#menuBtn:hover{
+    background: #eecae8;
+}
+.sidebar{
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top:0;
+    left:-250px;
+    background-color: #f3daef;
+    color:rgb(13, 4, 49);
+    padding-top: 60px;
+    transition: 0.3s;
+    z-index: 999;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.5); 
+    
+}
+.sidebar.open{
+    left: 0;
+}
+.sidebar h3{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.sidebar .close-btn{
+    position:absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color:black;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" style="font-size:24px"><text y="24">✨</text></svg>'), auto;
+}
+.sidebar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar li a{
+    display: block;
+    padding: 12px 25px;
+    color: rgb(13, 4, 49);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+.sidebar li a:hover{
+    background-color: #eba5df;
+    color: #fff;
+}
+.sidebar li a.active{
+    background-color: #a35095;
+    color:goldenrod;
+}
+
 .switches{
     max-width: 80%;
     height: auto;

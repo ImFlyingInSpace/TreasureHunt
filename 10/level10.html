@@ -7,16 +7,23 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+    <button id="menuBtn" onclick="toggleMenu()">💖</button>
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleMenu()">×</button>
+        <h3>Odemčené levely</h3>
+        <ul id="levelList"></ul>
+    </div>
     <br><br>
     <h2> <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" style="font-size:24px"><text y="24">✨</text></svg>
  10 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" style="font-size:24px"><text y="24">✨</text></svg></h2>
     <br><br>
     <img src="dots.png" style="max-width: 1000px; width: 100%; height: auto;" alt="dots"
     <br><br>
-    <input type="text" id="heslo10" placeholder="Heslo">
+    <input type="text" id="heslo" placeholder="Heslo">
     <br><br>
     <button onclick="overHeslo()"> -> </button>
     <p id="zprava"></p>
     <script src="script10.js?v=4"></script>
+    <script src="../menuScript.js"></script>
 </body>
 </html>

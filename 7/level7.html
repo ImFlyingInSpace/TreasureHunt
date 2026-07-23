@@ -7,15 +7,22 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+    <button id="menuBtn" onclick="toggleMenu()">💖</button>
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleMenu()">×</button>
+        <h3>Odemčené levely</h3>
+        <ul id="levelList"></ul>
+    </div>
     <br><br>
-    <h2>7</h2>
+    <h2 class="lvlNo"></h2>
     <br><br>
     <img src="./words.png" alt="CONTACT SUPPORT PLS NAPIS MI NECO JE BLBE LOL" class="switches">
     <br><br>
-    <input type="text" id="heslo7" placeholder="Heslo">
+    <input type="text" id="heslo" placeholder="Heslo">
     <br><br>
     <button onclick="overHeslo()"> -> </button>
     <p id="zprava"></p>
     <script src="script7.js?v=4"></script>
+    <script src="../menuScript.js"></script>
 </body>
 </html>

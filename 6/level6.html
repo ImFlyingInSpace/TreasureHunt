@@ -7,15 +7,22 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+    <button id="menuBtn" onclick="toggleMenu()">💖</button>
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleMenu()">×</button>
+        <h3>Odemčené levely</h3>
+        <ul id="levelList"></ul>
+    </div>
     <br><br>
-    <h2>6</h2>
+    <h2 class="lvlNo"></h2>
     <br><br>
     <h4>60.48467824.671358-36.865679143.59411637.193469-113.00224870.921349-109.855626-5.82238929.302898</h4>
     <br><br>
-    <input type="text" id="heslo6" placeholder="Heslo">
+    <input type="text" id="heslo" placeholder="Heslo">
     <br><br>
     <button onclick="overHeslo()"> -> </button>
     <p id="zprava"></p>
     <script src="script6.js?v=4"></script>
+    <script src="../menuScript.js"></script>
 </body>
 </html>

@@ -7,16 +7,23 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+    <button id="menuBtn" onclick="toggleMenu()">💖</button>
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleMenu()">×</button>
+        <h3>Odemčené levely</h3>
+        <ul id="levelList"></ul>
+    </div>
     <br><br>
-    <h2>4</h2>
+    <h2 class="lvlNo"></h2>
     <br><br>
     <h3>bofmiksd</h3>
     <br><br>
-    <input type="text" id="heslo4" placeholder="Heslo">
+    <input type="text" id="heslo" placeholder="Heslo">
     <br><br>
     <button onclick="overHeslo()"> -> </button>
     <p id="zprava"></p>
     <script src="./script4.js?v=2"></script>
+    <script src="../menuScript.js"></script>
     <div id="tajemna_komnata2" onclick="magic()"></div>
     <div id="code2"></div>
 </body>

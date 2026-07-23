@@ -1,0 +1,115 @@
+html
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Treasure hunt UwU </title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- tlacitko pro menu-->
+    <button id="menuBtn" onclick="toggleMenu()"></button>
+    <!-- Vysouvací panel -->
+    <div id="sidebar" class="sidebar">
+    <button class="close-btn" onclick="toggleMenu()">×</button>
+    <h3>Odemčené levely</h3>
+    <ul id="levelList"></ul>
+    </div>
+    <br><br>
+    <!--vypsani cisla levelu-->
+    <h2 class="lvlNo"></h2> 
+    <br><br>
+    <input type="text" id="heslo" placeholder="Heslo">
+    <br><br>
+    <button onclick="overHeslo()"> -> </button>
+    <p id="zprava"></p>
+    <script src="./script.js"></script>
+    <script src="./menuScript.js></script>
+</body>
+</html>
+
+
+#######################################
+
+js
+
+lvl1
+
+const AKTUALNI_LEVEL = 1;
+const TAJNE_HESLO = "Inkognito Levhart Yódluje";
+
+//vypsani cisla levelu
+document.addEventListener("DOMContentLoaded", () => {
+    const cisloLvl = document.querySelector(".lvlNo");
+    if (cisloLvl) {
+        cisloLvl.innerText = AKTUALNI_LEVEL;
+    }
+});
+
+//overeni hesla
+function overHeslo(){
+    const zadaneHeslo = document.getElementById("heslo").value.trim();
+    const zpravaElem = document.getElementById("zprava");
+
+    if(zadaneHeslo==TAJNE_HESLO){
+        levelUp();
+    }
+    else{
+        zpravaElem.innerText = ":(";
+    }
+}
+
+/pousteni do dalsiho levelu
+function levelUp(){
+    const nextLvl = AKTUALNI_LEVEL + 1;
+    localStorage.setItem('levelUp', nextLvl);
+    window.location.href = `${nextLvl}/level${nextLvl}.html`;
+}
+
+//////////////////////
+lvl2 a vic
+
+const AKTUALNI_LEVEL = 2;
+const TAJNE_HESLO = "bWhudWFmdWw=";
+
+//kontrola ze nekdo nepreskocil level
+let dosazenyLvl = localStorage.getItem('levelUp');
+if (!dosazenyLvl || Number(dosazenyLvl) < AKTUALNI_LEVEL){
+    alert("Nuh-uh-uhhhh")
+    window.location.href = '../index.html';
+}
+
+//vypsani cisla levelu
+document.addEventListener("DOMContentLoaded", () => {
+    const cisloLvl = document.querySelector(".lvlNo");
+    if (cisloLvl) {
+        cisloLvl.innerText = AKTUALNI_LEVEL;
+    }
+});
+
+//overeni hesla
+function overHeslo(){
+    const zadaneHeslo = document.getElementById("heslo").value.trim();
+    const hh = atob(TAJNE_HESLO);
+    let sh = "";
+    for(let i = 0; i< hh.length; i += 2){
+        sh += hh[i]; 
+    }
+    const zpravaElem = document.getElementById("zprava");
+
+    if(zadaneHeslo=== sh){
+        levelUp();
+    }
+    else{
+        zpravaElem.innerText = ":(";
+    }
+}
+
+//pousteni do dalsiho levelu
+function levelUp(){
+    const nextLvl = AKTUALNI_LEVEL + 1;
+    localStorage.setItem('levelUp', nextLvl);
+    window.location.href = `../${nextLvl}/level${nextLvl}.html`;
+}
